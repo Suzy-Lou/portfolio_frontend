@@ -47,3 +47,23 @@
     color: #888;
   }
   
+
+  .getButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--color3);
+    color: var(--color5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .createButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--color2);
+    color: var(--color5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
