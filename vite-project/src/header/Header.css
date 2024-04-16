@@ -1,0 +1,58 @@
+ :root {
+    --color1: #FBEBFF;
+    --color2: #F7D6FF;
+    --color3: #E785FF;
+    --color4: #C400F5;
+    --color5: #520066;
+  }
+ 
+ 
+/* Styles globaux */
+body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* En-tête */
+.header {
+    background-color: var(--color1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Pacifico', sans-serif;
+    font-size: 1.5em;
+    color: var(--color5);
+    padding: 5px 10px;
+    height: 4vh;
+}
+
+.logoHome, .logoUtilisateur {
+    height: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 5px;
+}
+
+.logoHome img, .logoUtilisateur img {
+    max-height: 100%;
+    width: 70%;
+    margin: auto;
+}
+
+.titre {
+    flex: 1; 
+    text-align: center; 
+    padding: 0 10px; 
+}
+
+.logoUtilisateur {
+    justify-content: flex-end; 
+}
+
+.header-container {
+    width: 100%;
+    position: fixed; 
+    top: 0;
+}

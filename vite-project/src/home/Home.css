@@ -4,7 +4,13 @@
     padding: 2rem;
     text-align: center;
   }
-  
+  .police {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    color: var(--color5);
+}
+
+
   .logo {
     height: 6em;
     padding: 1.5em;
