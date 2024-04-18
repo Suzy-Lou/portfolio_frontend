@@ -1,7 +1,9 @@
-import './AdminPage.css'
+import './AddProject.css'
 import Header from '../header/Header.jsx'
 
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+
 
 function AdminPage() {
 
@@ -9,9 +11,21 @@ function AdminPage() {
     const [contenuBref, setContenuBref] = useState('');
     const [contenu, setContenu] = useState('');
     const [listeMots, setListeMots] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    const navigate = useNavigate();
 
     const createProject = async (event) => {
         event.preventDefault();
+
+        if (contenuBref.length > 80) {
+            setErrorMessage('Le contenu bref ne doit pas dépasser 80 caractères.');
+            return;
+        }
+
+        if (contenu.split(' ').length > 250) {
+            setErrorMessage('Le contenu ne doit pas dépasser 250 mots.');
+            return;
+        }
 
         const response = await fetch('http://localhost:3000/newProject', {
             method: 'POST',
@@ -22,10 +36,7 @@ function AdminPage() {
         });
 
         if (response.ok) {
-            const data = await response.json();
-            console.log(data);
-        } else {
-            console.log('Failed to create project');
+            navigate(`/admin/projects`);
         }
     }
 
@@ -49,8 +60,10 @@ return (
                 Liste de Mots :
                 <input type="text" value={listeMots} onChange={e => setListeMots(e.target.value)} />
             </label>
-            <input type="submit" value="Envoyer" />
-        </form>
+            {errorMessage && <p>{errorMessage}</p>}
+
+            <button type="submit"  >Envoyer</button>        
+            </form>
         </>
       )
 }

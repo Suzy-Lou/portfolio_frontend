@@ -22,7 +22,7 @@ function Connexion() {
       if (response.ok){
         const data = await response.json();
         console.log(data);
-        navigate('/admin');
+        navigate('/admin/projects');
       } else {
         console.log('Failed to log in');
       }
