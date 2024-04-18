@@ -42,12 +42,17 @@ function AdminProjectDetailed() {
       const editProjectClickButton = () => {
         navigate(`/admin/projects/edit/${id}`);
       }
+      const handleBackButtonClick = () => {
+        navigate('/admin/projects');
+    }
 
 
 //todo : ajouter le bouton modification et suppression
     return (
         <>
         <Header/>
+        <button onClick={handleBackButtonClick}>retour à la liste des projets</button>
+
         <button onClick={deleteProject}>Supprimer le projet</button>
         <button onClick={editProjectClickButton} className="edit-button">Editer le projet</button>
                 {

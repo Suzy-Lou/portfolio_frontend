@@ -40,9 +40,15 @@ function AdminPage() {
         }
     }
 
+
+    const handleBackButtonClick = () => {
+        navigate('/admin/projects');
+    }
+
 return (
         <>
         <Header/>
+        <button onClick={handleBackButtonClick}>retour à la liste des projets</button>
         <form onSubmit={createProject}>
             <label>
                 Titre :
