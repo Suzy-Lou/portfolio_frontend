@@ -5,65 +5,60 @@
     --color4: #C400F5;
     --color5: #520066;
   }
- 
- 
-/* Styles globaux */
+
+
 body, #root {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
-/* En-tête */
+
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: var(--color1);
     display: flex;
-    justify-content: space-between;
     align-items: center;
     font-family: 'Pacifico', sans-serif;
     font-size: 1.5em;
     color: var(--color5);
-    padding: 5px 10px;
+    padding: 1vh 2vh;
     height: 4vh;
+    z-index: 999;
 }
 
 .logoHome, .logoUtilisateur {
-    height: 90%;
+    height: 100%;
     display: flex;
-    align-items: center; 
-    justify-content: center; 
-    padding: 5px;
+    align-items: center;
+    padding: 0 10px;
 }
 
 .logoHome img, .logoUtilisateur img {
-    height: 80%;
-    max-height: 100%;
-    width: 70%;
-    margin: auto;
+    height: 4vh; 
+    max-height: 100%; 
+    width: auto;
 }
 
 .titre {
-    flex: 1; 
-    text-align: center; 
-    padding: 0 10px; 
+    flex: 1;
+    text-align: center;
+    margin: 0 auto; 
+}
+
+.project-link {
+    color: var(--color5);
+    font-family: 'Pacifico', sans-serif;
+    font-size: 1em;
+    text-decoration: none;
+    margin-right: 20px;
 }
 
 .logoUtilisateur {
-    justify-content: flex-end; 
+    margin-left: auto; 
 }
 
-.header-container {
-    width: 100%;
-    position: fixed; 
-    top: 0;
-}
 
-.connect-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: var(--color3);
-    color: var(--color5);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }

@@ -8,9 +8,15 @@ function Connexion() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState('');
+
 
     const handleSubmit = async (event) => {
       event.preventDefault();
+
+      setErrorMessage('');
+
+
 
       const response = await fetch('http://localhost:3000/login', {
           method: 'POST',
@@ -25,6 +31,7 @@ function Connexion() {
         navigate('/admin/projects');
       } else {
         console.log('Failed to log in');
+        setErrorMessage('Failed to log in. Please check your email and password.');
       }
       
       
@@ -47,6 +54,7 @@ function Connexion() {
             </label>
             <input type="submit" value="Se connecter" />
         </form>
+        {errorMessage && <p>{errorMessage}</p>}
         </>
       )
 }

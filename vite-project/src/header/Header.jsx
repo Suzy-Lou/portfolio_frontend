@@ -32,9 +32,7 @@ function Header() {
                     Suzy-Lou Gervot
                 </Link>
             </div>
-            <Link to="/projets">
-                <button className="project-button">projets</button>
-            </Link>
+            <Link to="/projets" className="project-link">Projets</Link>
             <div className="logoUtilisateur">
                 <Link to="/Connexion">
                     <a href="Connexion">

@@ -1,0 +1,88 @@
+/* APropos.css */
+
+/* Styles globaux */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content {
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 100px; /* Ajouter une marge supérieure pour éviter que la photo soit coupée */
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile h2, .profile h3 {
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    color: var(--color5); /* Couleur de votre choix */
+}
+
+.about {
+    margin-bottom: 20px;
+}
+
+.email-form {
+    width: 100%;
+    max-width: 400px; /* Limiter la largeur du formulaire */
+    margin: 0 auto; /* Centrer le formulaire horizontalement */
+}
+
+.email-form h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.email-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.email-form input[type="text"],
+.email-form textarea,
+.email-form button {
+    width: calc(100% - 20px); /* Réduire la largeur de 20px pour le padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Inclure la taille du padding dans la largeur */
+}
+
+.email-form textarea {
+    height: 150px;
+}
+
+.email-form button {
+    width: auto; /* Ajuster la largeur automatiquement */
+    margin: 0 auto; /* Centrer le bouton horizontalement */
+    display: block; /* Afficher le bouton comme un bloc pour la centration */
+    background-color: var(--color3); /* Couleur de votre choix */
+    color: var(--color5); /* Couleur de votre choix */
+    cursor: pointer;
+}
+
+.email-form button:hover {
+    background-color: var(--color4); /* Couleur de votre choix */
+}
