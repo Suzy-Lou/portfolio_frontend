@@ -21,15 +21,14 @@ function AdminProjects() {
     return (
         <>
         <Header/>
-        <h1>Bienvenue sur la page admin</h1>
         <Link to="/projects/add" className="add-project-button">Ajouter un projet</Link>
         {
-          
             project && project.map((project) => (
                 <div className="project" key={project._id}>
                     <Link to={`/admin/projects/${project._id}`}>
                         <h2>{project.titre}</h2>
                         <p>{project.contenuBref}</p>
+                        <img src={project.thumbnailImage} alt="thumbnail"/>
                     </Link>
                     
                 </div>

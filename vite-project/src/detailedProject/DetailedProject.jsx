@@ -24,23 +24,26 @@ function DetailedProject() {
 
       useEffect(() => {
         getProjectID();
-      },);
+      }, []);
 
 
     return (
         <>
         <Header/>
+        <div className="project-container">
+
         {
     projectID && (
-        <div className="project" key={projectID._id}>
+        <div className="project-detailed" key={projectID._id}>
             <h2>{projectID.titre}</h2>
             <p>{projectID.contenuBref}</p>
             <p>{projectID.contenu}</p>
             <p>{projectID.listeMots}</p>
+            <img src={projectID.illustrationImage} alt="imageillustration"/>
         </div>
         )
         }
-
+        </div>
         </>
       )
 }

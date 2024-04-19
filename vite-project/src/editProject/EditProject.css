@@ -1,0 +1,64 @@
+/* ModifierProject.css */
+
+/* Conteneur principal */
+.edit-project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Pleine hauteur de la fenêtre */
+}
+
+/* Titre */
+.edit-project-title {
+    font-size: 1.5rem; /* Taille de la police */
+    font-weight: bold; /* Gras */
+    margin-bottom: 20px; /* Espacement en bas */
+    color: #520066; /* Couleur du texte */
+}
+
+/* Formulaire */
+.edit-project-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%; /* Largeur du formulaire */
+    max-width: 600px; /* Largeur maximale du formulaire */
+    padding: 20px; /* Espacement intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Labels */
+.edit-project-label {
+    width: 100%; /* Largeur totale */
+    margin-bottom: 10px; /* Espacement en bas */
+    font-size: 1rem; /* Taille de la police */
+}
+
+/* Inputs */
+.edit-project-input {
+    width: calc(100% - 20px); /* Largeur totale moins la largeur des marges */
+    padding: 10px; /* Espacement intérieur */
+    border: 1px solid #520066; /* Bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 1rem; /* Taille de la police */
+    box-sizing: border-box; /* Inclure la bordure et le rembourrage dans la largeur */
+}
+
+/* Bouton Modifier */
+.edit-project-button {
+    width: 100%; /* Largeur totale */
+    max-width: 200px; /* Largeur maximale */
+    padding: 10px; /* Espacement intérieur */
+    color: #520066; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    font-size: 1rem; /* Taille de la police */
+    transition: background-color 0.3s ease; /* Transition de couleur au survol */
+}
+
+.edit-project-button:hover {
+    background-color: #C400F5; /* Changement de couleur au survol */
+}

@@ -11,6 +11,8 @@ function AdminPage() {
     const [contenuBref, setContenuBref] = useState('');
     const [contenu, setContenu] = useState('');
     const [listeMots, setListeMots] = useState('');
+    const [thumbnailImage, setThumbnailImage] = useState('');
+    const [illustrationImage, setIllustrationImage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
 
@@ -32,7 +34,7 @@ function AdminPage() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ titre, contenuBref, contenu, listeMots })
+            body: JSON.stringify({ titre, contenuBref, contenu, listeMots, thumbnailImage, illustrationImage})
         });
 
         if (response.ok) {
@@ -47,30 +49,39 @@ function AdminPage() {
 
 return (
         <>
-        <Header/>
-        <button onClick={handleBackButtonClick}>retour à la liste des projets</button>
-        <form onSubmit={createProject}>
-            <label>
-                Titre :
-                <input type="text" value={titre} onChange={e => setTitre(e.target.value)} />
-            </label>
-            <label>
-                Contenu Bref :
-                <input type="text" value={contenuBref} onChange={e => setContenuBref(e.target.value)} />
-            </label>
-            <label>
-                Contenu :
-                <textarea value={contenu} onChange={e => setContenu(e.target.value)} />
-            </label>
-            <label>
-                Liste de Mots :
-                <input type="text" value={listeMots} onChange={e => setListeMots(e.target.value)} />
-            </label>
-            {errorMessage && <p>{errorMessage}</p>}
-
-            <button type="submit"  >Envoyer</button>        
-            </form>
-        </>
+        <Header />
+            <div className="edit-project-container">
+            <button onClick={handleBackButtonClick} className="add-project-button">retour à la liste des projets</button>
+    <form onSubmit={createProject} className="edit-project-form">
+        <label className="edit-project-label">
+            Titre :
+            <input type="text" value={titre} onChange={e => setTitre(e.target.value)} className="edit-project-input" />
+        </label>
+        <label className="edit-project-label">
+            Contenu Bref :
+            <input type="text" value={contenuBref} onChange={e => setContenuBref(e.target.value)} className="edit-project-input" />
+        </label>
+        <label className="edit-project-label">
+            Contenu :
+            <textarea value={contenu} onChange={e => setContenu(e.target.value)} className="edit-project-input" />
+        </label>
+        <label className="edit-project-label">
+            Liste de Mots :
+            <input type="text" value={listeMots} onChange={e => setListeMots(e.target.value)} className="edit-project-input" />
+        </label>
+        <label className="edit-project-label">
+            Thumbnail Image :
+            <input type="text" value={thumbnailImage} onChange={e => setThumbnailImage(e.target.value)} className="edit-project-input" />
+        </label>
+        <label className="edit-project-label">
+            Illustration Image :
+            <input type="text" value={illustrationImage} onChange={e => setIllustrationImage(e.target.value)} className="edit-project-input" />
+        </label>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
+        <button type="submit" className="edit-project-button">Envoyer</button>
+    </form>
+</div>
+</>
       )
 }
 

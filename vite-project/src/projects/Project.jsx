@@ -21,17 +21,20 @@ function Project() {
     return (
         <>
         <Header/>
+        <div className='project-container'>
         {
             project && project.map((project) => (
                 <div className="project" key={project._id}>
                     <Link to={`/projets/${project._id}`}>
                         <h2>{project.titre}</h2>
                         <p>{project.contenuBref}</p>
+                        <img src={project.thumbnailImage} alt="thumbnail"/>
                     </Link>
                     
                 </div>
             ))
         }
+        </div>
         </>
       )
 }

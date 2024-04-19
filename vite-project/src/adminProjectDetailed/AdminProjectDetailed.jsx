@@ -50,22 +50,21 @@ function AdminProjectDetailed() {
 //todo : ajouter le bouton modification et suppression
     return (
         <>
-        <Header/>
-        <button onClick={handleBackButtonClick}>retour à la liste des projets</button>
-
-        <button onClick={deleteProject}>Supprimer le projet</button>
-        <button onClick={editProjectClickButton} className="edit-button">Editer le projet</button>
-                {
-    projectID && (
-        <div className="project" key={projectID._id}>
-            <h2>{projectID.titre}</h2>
-            <p>{projectID.contenuBref}</p>
-            <p>{projectID.contenu}</p>
-            <p>{projectID.listeMots}</p>
-        </div>
-        )
-        }
-
+        <Header />
+            <button onClick={handleBackButtonClick} className="back-button">retour à la liste des projets</button>
+            <button onClick={deleteProject} className="delete-button">Supprimer le projet</button>
+            <button onClick={editProjectClickButton} className="edit-button">Editer le projet</button>
+            {
+                projectID && (
+                    <div className="project" key={projectID._id}>
+                        <h2>{projectID.titre}</h2>
+                        <p>{projectID.contenuBref}</p>
+                        <p>{projectID.contenu}</p>
+                        <p>{projectID.listeMots}</p>
+                        <img src={projectID.illustrationImage} alt="imageillustration" />
+                    </div>
+                )
+            }
         </>
       )
 }

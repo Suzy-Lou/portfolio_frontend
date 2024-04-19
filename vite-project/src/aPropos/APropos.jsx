@@ -5,10 +5,6 @@ import emailjs from 'emailjs-com'
 import { useState, useEffect } from 'react'
 import profileLogo from '../icones/profile.png'
 
-
-
-
-
 function APropos() {
 
   const [senderName, setSenderName] = useState('');
@@ -45,11 +41,11 @@ useEffect(() => {
 
     try {
         (function () {
-            emailjs.init("zQF3PQs9jY3JcfQHL");
+            emailjs.init(import.meta.env.VITE_EMAILJS);
         })();
 
-        var service_id = "service_92d39nt";
-        var template_id = "template_g3baswd";
+        var service_id = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        var template_id = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
         await emailjs.sendForm(service_id, template_id, e.target)
             .then(res => {
@@ -94,7 +90,7 @@ useEffect(() => {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lectus ut nisi vehicula convallis. Nulla auctor felis a interdum vehicula. Nulla facilisi. Nullam at aliquam lorem. Donec sit amet ultricies quam.</p>
                 </div>
         <div className="email-form">
-        <h2>Send Email</h2>
+        <h2>Envoyer un email</h2>
         <form onSubmit={sendEmail}>
         <label>Nom</label>
         <input type="text" value={senderName} onChange={e => setSenderName(e.target.value)}id="senderName" /> 
@@ -102,7 +98,7 @@ useEffect(() => {
         <p>destinataire : {to}</p>
         <input type="hidden" value={to} name="to" />
         <br/>
-        subject
+        <label>Objet du mail</label>
         <input type="text" value={subject} onChange={e => setSubject(e.target.value)} id="subject"/>
         <br/>
         <label>Adresse Email</label>

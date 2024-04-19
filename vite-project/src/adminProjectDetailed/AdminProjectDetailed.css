@@ -1,0 +1,96 @@
+/* AdminProjectDetailed.css */
+
+/* :root pour définir les variables */
+:root {
+    --color1: #FBEBFF; /* Couleur d'arrière-plan */
+    --color2: #F7D6FF; /* Couleur de fond du bouton de suppression */
+    --color3: #E785FF; /* Couleur de fond du bouton d'édition */
+    --color4: #C400F5; /* Couleur de fond du bouton d'édition au survol */
+    --color5: #520066; /* Couleur du texte */
+}
+
+/* Styles globaux */
+body,
+#root {
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal */
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Espacement intérieur */
+}
+
+/* Bouton de retour */
+.back-button {
+    padding: 10px 20px; /* Espacement intérieur */
+    margin-bottom: 20px; /* Espacement en bas */
+    background-color: var(--color2); /* Utilisation de la variable de couleur de fond du bouton de suppression */
+    color: var(--color5); /* Utilisation de la variable de couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    font-size: 1rem; /* Taille de la police */
+    transition: background-color 0.3s ease; /* Transition de couleur au survol */
+}
+
+.back-button:hover {
+    background-color: var(--color4); /* Utilisation de la variable de couleur de fond du bouton de suppression au survol */
+}
+
+/* Bouton de suppression */
+.delete-button {
+    padding: 10px 20px; /* Espacement intérieur */
+    margin-bottom: 10px; /* Espacement en bas */
+    background-color: var(--color2); /* Utilisation de la variable de couleur de fond du bouton de suppression */
+    color: var(--color5); /* Utilisation de la variable de couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    font-size: 1rem; /* Taille de la police */
+    transition: background-color 0.3s ease; /* Transition de couleur au survol */
+}
+
+.delete-button:hover {
+    background-color: var(--color4); /* Utilisation de la variable de couleur de fond du bouton de suppression au survol */
+}
+
+/* Bouton d'édition */
+.edit-button {
+    padding: 10px 20px; /* Espacement intérieur */
+    background-color: var(--color3); /* Utilisation de la variable de couleur de fond du bouton d'édition */
+    color: var(--color5); /* Utilisation de la variable de couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    font-size: 1rem; /* Taille de la police */
+    transition: background-color 0.3s ease; /* Transition de couleur au survol */
+}
+
+.edit-button:hover {
+    background-color: var(--color4); /* Utilisation de la variable de couleur de fond du bouton d'édition au survol */
+}
+
+/* Détails du projet */
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px; /* Largeur maximale */
+    padding: 20px; /* Espacement intérieur */
+    background-color: var(--color1); /* Utilisation de la variable d'arrière-plan */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin-bottom: 20px; /* Espacement en bas */
+}
+
+.project img {
+    max-width: 100%; /* Largeur maximale de l'image */
+    height: auto; /* Hauteur automatique pour maintenir les proportions */
+}

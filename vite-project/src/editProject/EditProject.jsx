@@ -41,6 +41,8 @@ function EditProject() {
             contenuBref: newContenuBref,
             contenu: newContenu,
             listeMots: event.target.listeMots.value,
+            thumbnailImage: event.target.thumbnailImage.value,
+            illustrationImage: event.target.illustrationImage.value,
         }),
     });
         if (response.ok) {
@@ -48,38 +50,42 @@ function EditProject() {
         }
     }
 
-    const handleBackButtonClick = () => {
-        navigate('/admin/projects');
-    }
-
 
 
     return (
         <>
-        <Header/>
-        <button onClick={handleBackButtonClick}>retour à la liste des projets</button>
-        <h1>Modifier un projet</h1>
-        <form onSubmit={handleSubmit}>
-            <label>
-                Titre :
-                <input type="text" name="titre" defaultValue={project?.titre} />
-            </label>
-            <label>
-                Contenu Bref :
-                <input type="text" name="contenuBref" defaultValue={project?.contenuBref} />
-            </label>
-            <label>
-                Contenu :
-                <textarea name="contenu" defaultValue={project?.contenu} />
-            </label>
-            <label>
-                Liste de Mots :
-                <input type="text" name="listeMots" defaultValue={project?.listeMots} />
-            </label>
-            {errorMessage && <p>{errorMessage}</p>}
-
-            <button type="submit">Modifier</button>
-        </form>
+        <Header />
+            <div className="edit-project-container">
+                <h1 className="edit-project-title">Modifier le projet</h1>
+                <form onSubmit={handleSubmit} className="edit-project-form">
+                    <label className="edit-project-label">
+                        Titre :
+                        <input type="text" name="titre" defaultValue={project?.titre} className="edit-project-input" />
+                    </label>
+                    <label className="edit-project-label">
+                        Contenu Bref :
+                        <input type="text" name="contenuBref" defaultValue={project?.contenuBref} className="edit-project-input" />
+                    </label>
+                    <label className="edit-project-label">
+                        Contenu :
+                        <textarea name="contenu" defaultValue={project?.contenu} className="edit-project-input" />
+                    </label>
+                    <label className="edit-project-label">
+                        Liste de Mots :
+                        <input type="text" name="listeMots" defaultValue={project?.listeMots} className="edit-project-input" />
+                    </label>
+                    <label className="edit-project-label">
+                        Image Thumbnail:
+                        <input type="text" name="thumbnailImage" defaultValue={project?.thumbnailImage} className="edit-project-input" />
+                    </label>
+                    <label className="edit-project-label">
+                        Image Illustration :
+                        <input type="text" name="illustrationImage" defaultValue={project?.illustrationImage} className="edit-project-input" />
+                    </label>
+                    {errorMessage && <p className="error-message">{errorMessage}</p>}
+                    <button type="submit" className="edit-project-button">Modifier</button>
+                </form>
+            </div>
         </>
     )
 }
