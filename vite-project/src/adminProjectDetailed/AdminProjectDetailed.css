@@ -1,0 +1,87 @@
+:root {
+    --color1: #FBEBFF;
+    --color2: #F7D6FF;
+    --color3: #E785FF;
+    --color4: #C400F5;
+    --color5: #520066;
+}
+
+body,
+#root {
+    margin: 0;
+    padding: 0;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.back-button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: var(--color2);
+    color: var(--color5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: var(--color4);
+}
+
+.delete-button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: var(--color2);
+    color: var(--color5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: var(--color4);
+}
+
+.edit-button {
+    padding: 10px 20px;
+    background-color: var(--color3);
+    color: var(--color5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: var(--color4);
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: var(--color1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+}

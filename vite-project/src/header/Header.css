@@ -1,0 +1,63 @@
+ :root {
+    --color1: #FBEBFF;
+    --color2: #F7D6FF;
+    --color3: #E785FF;
+    --color4: #C400F5;
+    --color5: #520066;
+  }
+
+
+body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color1);
+    display: flex;
+    align-items: center;
+    font-family: 'Pacifico', sans-serif;
+    font-size: 1.5em;
+    color: var(--color5);
+    padding: 1vh 2vh;
+    height: 4vh;
+    z-index: 999;
+}
+
+.logoHome, .logoUtilisateur {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.logoHome img, .logoUtilisateur img {
+    height: 4vh; 
+    max-height: 100%; 
+    width: auto;
+}
+
+.titre {
+    flex: 1;
+    text-align: center;
+    margin: 0 auto; 
+}
+
+.project-link {
+    color: var(--color5);
+    font-family: 'Pacifico', sans-serif;
+    font-size: 1em;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.logoUtilisateur {
+    margin-left: auto; 
+}
+
+

@@ -1,0 +1,65 @@
+:root {
+    --color1: #FBEBFF;
+    --color2: #F7D6FF;
+    --color3: #E785FF;
+    --color4: #C400F5;
+    --color5: #520066;
+}
+
+
+.edit-project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.edit-project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--color5);
+}
+
+.edit-project-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-project-label {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.edit-project-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid var(--color5);
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.edit-project-button {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    color: var(--color5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.edit-project-button:hover {
+    background-color: var(--color4);
+}
