@@ -10,10 +10,11 @@ import { useParams } from 'react-router-dom';
 function DetailedProject() {
     const [projectID,projectByID] = useState(null);
     const { id } = useParams();
+    const PORT = import.meta.env.VITE_PORT;
 
 
     const getProjectID = async () => {
-        const response = await fetch(`http://localhost:3000/projects/${id}`);
+        const response = await fetch(`http://localhost:${PORT}/projects/${id}`);
         if (response.ok) {
           const project = await response.json();
           console.log(project);

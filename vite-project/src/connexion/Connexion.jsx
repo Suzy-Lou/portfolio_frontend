@@ -9,6 +9,7 @@ function Connexion() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState('');
+  const PORT = import.meta.env.VITE_PORT;
 
 
     const handleSubmit = async (event) => {
@@ -18,7 +19,7 @@ function Connexion() {
 
 
 
-      const response = await fetch('http://localhost:3000/login', {
+      const response = await fetch(`http://localhost:${PORT}/login`, {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'

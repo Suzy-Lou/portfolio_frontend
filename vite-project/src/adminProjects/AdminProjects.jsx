@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 
 function AdminProjects() {
     const [project,allprojects] = useState(null);
+    const PORT = import.meta.env.VITE_PORT;
     const getProject = async () => {
-        const response = await fetch('http://localhost:3000/projects');
+        const response = await fetch(`http://localhost:${PORT}/projects`);
         if (response.ok) {
           const projects = await response.json();
           console.log(projects);

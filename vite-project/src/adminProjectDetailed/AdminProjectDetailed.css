@@ -1,96 +1,87 @@
-/* AdminProjectDetailed.css */
-
-/* :root pour définir les variables */
 :root {
-    --color1: #FBEBFF; /* Couleur d'arrière-plan */
-    --color2: #F7D6FF; /* Couleur de fond du bouton de suppression */
-    --color3: #E785FF; /* Couleur de fond du bouton d'édition */
-    --color4: #C400F5; /* Couleur de fond du bouton d'édition au survol */
-    --color5: #520066; /* Couleur du texte */
+    --color1: #FBEBFF;
+    --color2: #F7D6FF;
+    --color3: #E785FF;
+    --color4: #C400F5;
+    --color5: #520066;
 }
 
-/* Styles globaux */
 body,
 #root {
     margin: 0;
     padding: 0;
 }
 
-/* Conteneur principal */
 .project-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px; /* Espacement intérieur */
+    padding: 20px;
 }
 
-/* Bouton de retour */
 .back-button {
-    padding: 10px 20px; /* Espacement intérieur */
-    margin-bottom: 20px; /* Espacement en bas */
-    background-color: var(--color2); /* Utilisation de la variable de couleur de fond du bouton de suppression */
-    color: var(--color5); /* Utilisation de la variable de couleur du texte */
-    border: none; /* Pas de bordure */
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer; /* Curseur pointeur */
-    font-size: 1rem; /* Taille de la police */
-    transition: background-color 0.3s ease; /* Transition de couleur au survol */
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: var(--color2);
+    color: var(--color5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .back-button:hover {
-    background-color: var(--color4); /* Utilisation de la variable de couleur de fond du bouton de suppression au survol */
+    background-color: var(--color4);
 }
 
-/* Bouton de suppression */
 .delete-button {
-    padding: 10px 20px; /* Espacement intérieur */
-    margin-bottom: 10px; /* Espacement en bas */
-    background-color: var(--color2); /* Utilisation de la variable de couleur de fond du bouton de suppression */
-    color: var(--color5); /* Utilisation de la variable de couleur du texte */
-    border: none; /* Pas de bordure */
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer; /* Curseur pointeur */
-    font-size: 1rem; /* Taille de la police */
-    transition: background-color 0.3s ease; /* Transition de couleur au survol */
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: var(--color2);
+    color: var(--color5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .delete-button:hover {
-    background-color: var(--color4); /* Utilisation de la variable de couleur de fond du bouton de suppression au survol */
+    background-color: var(--color4);
 }
 
-/* Bouton d'édition */
 .edit-button {
-    padding: 10px 20px; /* Espacement intérieur */
-    background-color: var(--color3); /* Utilisation de la variable de couleur de fond du bouton d'édition */
-    color: var(--color5); /* Utilisation de la variable de couleur du texte */
-    border: none; /* Pas de bordure */
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer; /* Curseur pointeur */
-    font-size: 1rem; /* Taille de la police */
-    transition: background-color 0.3s ease; /* Transition de couleur au survol */
+    padding: 10px 20px;
+    background-color: var(--color3);
+    color: var(--color5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .edit-button:hover {
-    background-color: var(--color4); /* Utilisation de la variable de couleur de fond du bouton d'édition au survol */
+    background-color: var(--color4);
 }
 
-/* Détails du projet */
 .project {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 600px; /* Largeur maximale */
-    padding: 20px; /* Espacement intérieur */
-    background-color: var(--color1); /* Utilisation de la variable d'arrière-plan */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
-    margin-bottom: 20px; /* Espacement en bas */
+    max-width: 600px;
+    padding: 20px;
+    background-color: var(--color1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .project img {
-    max-width: 100%; /* Largeur maximale de l'image */
-    height: auto; /* Hauteur automatique pour maintenir les proportions */
+    max-width: 100%;
+    height: auto;
 }

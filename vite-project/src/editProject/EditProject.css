@@ -1,64 +1,65 @@
-/* ModifierProject.css */
+:root {
+    --color1: #FBEBFF;
+    --color2: #F7D6FF;
+    --color3: #E785FF;
+    --color4: #C400F5;
+    --color5: #520066;
+}
 
-/* Conteneur principal */
+
 .edit-project-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Pleine hauteur de la fenêtre */
+    height: 100vh;
 }
 
-/* Titre */
 .edit-project-title {
-    font-size: 1.5rem; /* Taille de la police */
-    font-weight: bold; /* Gras */
-    margin-bottom: 20px; /* Espacement en bas */
-    color: #520066; /* Couleur du texte */
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--color5);
 }
 
-/* Formulaire */
 .edit-project-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%; /* Largeur du formulaire */
-    max-width: 600px; /* Largeur maximale du formulaire */
-    padding: 20px; /* Espacement intérieur */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Labels */
 .edit-project-label {
-    width: 100%; /* Largeur totale */
-    margin-bottom: 10px; /* Espacement en bas */
-    font-size: 1rem; /* Taille de la police */
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1rem;
 }
 
-/* Inputs */
 .edit-project-input {
-    width: calc(100% - 20px); /* Largeur totale moins la largeur des marges */
-    padding: 10px; /* Espacement intérieur */
-    border: 1px solid #520066; /* Bordure */
-    border-radius: 5px; /* Coins arrondis */
-    font-size: 1rem; /* Taille de la police */
-    box-sizing: border-box; /* Inclure la bordure et le rembourrage dans la largeur */
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid var(--color5);
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
-/* Bouton Modifier */
 .edit-project-button {
-    width: 100%; /* Largeur totale */
-    max-width: 200px; /* Largeur maximale */
-    padding: 10px; /* Espacement intérieur */
-    color: #520066; /* Couleur du texte */
-    border: none; /* Pas de bordure */
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer; /* Curseur pointeur */
-    font-size: 1rem; /* Taille de la police */
-    transition: background-color 0.3s ease; /* Transition de couleur au survol */
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    color: var(--color5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .edit-project-button:hover {
-    background-color: #C400F5; /* Changement de couleur au survol */
+    background-color: var(--color4);
 }

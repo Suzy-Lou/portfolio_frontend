@@ -4,14 +4,16 @@ import Header from '../header/Header.jsx'
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
+
 function EditProject() {
+    const PORT = import.meta.env.VITE_PORT;
     const { id } = useParams();
     const navigate = useNavigate();
     const [project, setProject] = useState(null);
     const [errorMessage, setErrorMessage] = useState('');
 
     useEffect(() => {
-        fetch(`http://localhost:3000/projects/${id}`)
+        fetch(`http://localhost:${PORT}/projects/${id}`)
         .then(response => response.json())
         .then(data => {setProject(data);
         });
@@ -31,7 +33,7 @@ function EditProject() {
         setErrorMessage('Le contenu ne doit pas dépasser 250 mots.');
         return;
     }
-        const response = await fetch(`http://localhost:3000/projects/${id}`, {
+        const response = await fetch(`http://localhost:${PORT}/projects/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',

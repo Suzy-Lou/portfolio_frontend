@@ -15,7 +15,7 @@ body {
     max-width: 800px;
     padding: 20px;
     text-align: center;
-    margin-top: 100px; /* Ajouter une marge supérieure pour éviter que la photo soit coupée */
+    margin-top: 100px; 
 }
 
 .profile {
@@ -35,7 +35,7 @@ body {
 .profile h2, .profile h3 {
     margin: 0;
     font-family: 'Pacifico', cursive;
-    color: var(--color5); /* Couleur de votre choix */
+    color: var(--color5);
 }
 
 .about {
@@ -44,8 +44,8 @@ body {
 
 .email-form {
     width: 100%;
-    max-width: 400px; /* Limiter la largeur du formulaire */
-    margin: 0 auto; /* Centrer le formulaire horizontalement */
+    max-width: 400px; 
+    margin: 0 auto; 
 }
 
 .email-form h2 {
@@ -62,12 +62,12 @@ body {
 .email-form input[type="text"],
 .email-form textarea,
 .email-form button {
-    width: calc(100% - 20px); /* Réduire la largeur de 20px pour le padding */
+    width: calc(100% - 20px); 
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Inclure la taille du padding dans la largeur */
+    box-sizing: border-box; 
 }
 
 .email-form textarea {
@@ -75,14 +75,14 @@ body {
 }
 
 .email-form button {
-    width: auto; /* Ajuster la largeur automatiquement */
-    margin: 0 auto; /* Centrer le bouton horizontalement */
-    display: block; /* Afficher le bouton comme un bloc pour la centration */
-    background-color: var(--color3); /* Couleur de votre choix */
-    color: var(--color5); /* Couleur de votre choix */
+    width: auto; 
+    margin: 0 auto; 
+    display: block;
+    background-color: var(--color3);
+    color: var(--color5); 
     cursor: pointer;
 }
 
 .email-form button:hover {
-    background-color: var(--color4); /* Couleur de votre choix */
+    background-color: var(--color4); 
 }

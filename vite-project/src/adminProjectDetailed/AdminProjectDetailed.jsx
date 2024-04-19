@@ -11,11 +11,12 @@ function AdminProjectDetailed() {
     const [projectID,projectByID] = useState(null);
     const { id } = useParams();
     const navigate = useNavigate();
+    const PORT = import.meta.env.VITE_PORT;
 
 
 
     const getProjectID = async () => {
-        const response = await fetch(`http://localhost:3000/projects/${id}`);
+        const response = await fetch(`http://localhost:${PORT}/projects/${id}`);
         if (response.ok) {
           const project = await response.json();
           console.log(project);
@@ -29,7 +30,7 @@ function AdminProjectDetailed() {
       },);
 
       const deleteProject = async () => {
-        const deleteRequest = await fetch(`http://localhost:3000/projects/${id}`,{
+        const deleteRequest = await fetch(`http://localhost:${PORT}/projects/${id}`,{
         method : 'DELETE',
         headers: {
           "Content-Type": "application/json",

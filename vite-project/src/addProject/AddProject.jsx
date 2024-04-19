@@ -14,6 +14,7 @@ function AdminPage() {
     const [thumbnailImage, setThumbnailImage] = useState('');
     const [illustrationImage, setIllustrationImage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const PORT = import.meta.env.VITE_PORT;
     const navigate = useNavigate();
 
     const createProject = async (event) => {
@@ -29,7 +30,7 @@ function AdminPage() {
             return;
         }
 
-        const response = await fetch('http://localhost:3000/newProject', {
+        const response = await fetch(`http://localhost:${PORT}/newProject`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
